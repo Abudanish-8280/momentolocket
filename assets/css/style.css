@@ -1,0 +1,808 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --primary: #b38923;
+    --secondary: #996f03;
+    --white: #fff;
+    --black: #111;
+}
+
+body {
+    margin: 0;
+    padding: 0 !important;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+    overflow: inherit !important;
+}
+
+input[type="text"], input[type="tel"], input[type="email"], input[type="tel"], input[type="date"], textarea, select {
+    border: solid 1px #eee;
+    color: #444;
+    font-size: 15px;
+    line-height: normal;
+    margin: 0 0 15px;
+    padding: 13px 20px;
+    width: 100%;
+    outline: 0;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    background: var(--white);
+}
+
+select, input[type="date"] {
+    padding: 14px 17px;
+}
+
+input[type="submit"] {
+    color: var(--white);
+    background: var(--gradient);
+    text-transform: uppercase;
+    border: none;
+    padding: 12px 25px;
+    font-size: 14px;
+    border: 0;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+    outline: none;
+    font-weight: 600;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+input[type="submit"]:hover {
+    background: var(--primary);
+    color: var(--white);
+    transition: 0.8s;
+}
+
+textarea {
+    height: 100px;
+    margin-bottom: 5px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 15px 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #050A15;
+    font-weight: 500;
+    text-transform: inherit;
+    line-height: normal;
+}
+
+h1 {
+    font-size: 28px
+}
+
+h2 {
+    font-size: 24px
+}
+
+h3 {
+    font-size: 22px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h5 {
+    font-size: 18px
+}
+
+h6 {
+    font-size: 16px
+}
+
+p {
+    padding: 0;
+    margin: 0 0 10px 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 400;
+}
+
+ul, li, a {
+    list-style-type: none;
+    font-family: 'Montserrat', sans-serif;
+    color: #222;
+    line-height: 24px;
+    font-size: 14px;
+}
+
+a:hover {
+    transition: 0.8s;
+    text-decoration: none;
+}
+
+.heading, .leftheading {
+    margin-bottom: 25px;
+    font-size: 130px;
+    position: relative;
+    font-weight: 600;
+    display: block;
+    line-height: normal;
+    text-transform: capitalize;
+    color: var(--primary);
+}
+
+.heading {
+    text-align: center;
+}
+
+.heading span, .leftheading span {
+    padding-bottom: 16px;
+    font-size: 18px;
+    text-transform: capitalize;
+    color: var(--primary);
+    font-weight: 500;
+    position: relative;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+/* HEADER SECTION CSS */
+
+header .row {
+    align-items: center;
+}
+
+header .menucontainer ul li.dropdown {
+    position: relative;
+}
+
+header .menucontainer ul li.dropdown ul.dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 250px;
+    z-index: 2;
+    background: var(--white);
+    display: none;
+    box-shadow: 0 0 12px #0000001a;
+}
+
+header .menucontainer ul li.dropdown:hover ul.dropdown-content {
+    display: block;
+}
+
+header .menucontainer ul li.dropdown ul.dropdown-content li a {
+    padding: 8px 20px;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+}
+
+header .menucontainer ul li.dropdown ul li {
+    display: block;
+}
+
+header ul.menutop {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+header ul.menutop li a {
+    display: inline-block;
+    padding: 28px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+    color: #7f7f7f;
+}
+header a.tooglemenu {
+    display: none;
+}
+.cart {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+.cart li img {
+    width: 26px;
+}
+header .menucontainer>ul li.dropdown>a:after {
+    position: absolute;
+    content: '\f107';
+    top: 29px;
+    right: 6px;
+    font-family: 'Font Awesome 5 Free';
+    font-size: 11px;
+}
+header nav.menucontainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header ul.menucntct {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+header .offcanvas-body ul li a {
+    text-align: center;
+    display: block;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+header ul.menucntct>li:nth-child(2) a {
+    font-size: 15px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    column-gap: 2px;
+}
+header ul.menucntct>li:nth-child(1) a img, header ul.menucntct>li:nth-child(2) a img {
+    width: 18px;
+    height: auto;
+}
+
+
+/* SLIDER SECTION CSS */
+
+
+.mainslider {
+    position: relative;
+}
+
+.mainslider img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.mainslider a.playbtn {
+    position: absolute;
+    bottom: 20px;
+    z-index: 2;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.mainslider a.playbtn span {
+    font-weight: 600;
+    margin-top: 20px;
+    display: inline-block;
+    color: var(--primary);
+}
+.mainslider a.playbtn i {
+    color: var(--white);
+    font-size: 20px;
+    height: 65px;
+    width: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: var(--primary);
+    position: relative;
+    margin: 0 auto;
+}
+.mainslider a.playbtn i:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: var(--primary);
+    box-shadow: 0 0 10px #ad821a;
+    animation: playbtn 3s linear infinite forwards;
+    z-index: -1;
+}
+
+@keyframes playbtn {
+    from {
+        transform: scale(1.0);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+
+
+
+/* BE AMAZED SECTION CSS */
+.be-amazed img {
+    width: 100%;
+}
+.amazed-2 {
+    margin-top: 50%;
+}
+.be-amazed {
+    text-align: center;
+    padding-top: 50px;
+}
+.be-amazed h2 {
+    width: 400px;
+    display: inline-flex;
+    justify-content: center;
+    line-height: 140px;
+    margin-top: -170px;
+    padding-left: 50px;
+    font-size: 190px;
+}
+
+/* HOME LOCKET SECTION CSS */
+
+.digital-locket {
+    padding: 50px 0;
+    background: #fcfcfc;
+    margin-top: 50px;
+}
+.locket-image img {
+    padding-left: 80px;
+}
+.locket-info {
+    padding-right: 100px;
+}
+.locket-info p {
+    line-height: 34px;
+}
+.locket-info ul {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    padding-top: 25px;
+}
+.locket-info li i {
+    background: var(--primary);
+    color: var(--white);
+    height: 30px;
+    width: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    border-radius: 50px;
+    font-size: 12px;
+}
+.locket-info li a {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.locket-info li:nth-child(1) .btn .btn-primary {
+    color: var(--white) !important;
+}
+
+/* HOME PARENTS SECTION CSS */
+.parents {
+    padding-top: 60px;
+}
+.parent-1 {
+    padding-top: 70%;
+}
+.parents .row {
+    align-items: inherit;
+}
+.parents img {
+    width: 100%;
+}
+.parents h3 {
+    text-align: center;
+    font-size: 100px;
+    font-weight: 700;
+    color: #dededc;
+    margin-bottom: -115px;
+}
+
+/* HOME SPECIAL MOMENTS SECTION CSS */
+
+.special-moment .heading {
+    margin-top: -140px;
+    font-size: 190px;
+}
+.special-moment .row {
+    align-items: center;
+}
+.moment-info {
+    text-align: right;
+    padding: 0 40px 0 68px;
+}
+.moment-info h3 {
+    font-size: 23px;
+    font-weight: 600;
+    color: #93918e;
+    line-height: 32px;
+}
+.moment-info p {
+    margin: 20px 0 30px;
+}
+.moment-info img {
+    width: 100%;
+}
+
+
+/* HOME CUSTOMIZE SECTION CSS */
+
+.customize-locket img {
+    width: 100%;
+}
+.customize-content {
+    padding: 10% 65px 0 25px;
+}
+.customize-content p {
+    line-height: 29px;
+    margin-bottom: 25px;
+}
+.customize-locket {
+    padding-top: 60px;
+}
+
+
+/* HOME BENIFITS SECTION CSS */
+
+
+.benifits {
+    padding: 50px 0;
+}
+.benifit-item {
+    padding: 0 10px;
+}
+.benifit-item h3 {
+    color: var(--primary);
+    font-size: 20px;
+    margin: 20px 0 15px;
+}
+.benifit-item p {
+    margin: 0;
+}
+.benifit-item p a {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+
+/* HOW IT WORKS CSS */
+
+
+.howitwork {
+    position: relative;
+    background: #fafafa;
+    padding: 60px 0;
+    margin-bottom: 45px;
+}
+.howitwork img {
+    width: 100%;
+    height: auto;
+}
+
+.howitwork h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white);
+    margin: 0;
+}
+
+.howitwork h2 i {
+
+}
+
+
+
+/* UNIQUE SECTION CSS */
+
+.unique .row {
+    align-items: center;
+}
+
+.unique img {
+    width: 100%;
+}
+
+.unique h3 {
+    font-weight: 700;
+}
+
+.unique p {
+    margin: 20px 0 30px;
+}
+
+/* LOCKET SECTION CSS */
+
+.lockets {
+    padding: 50px 0 60px;
+    text-align: center;
+}
+.lockets .row {
+    row-gap: 23px;
+}
+
+.lockets h4 {
+    text-align: center;
+    color: #575757;
+    margin-bottom: 40px;
+}
+
+.lockets .heading {
+    margin-bottom: 10px;
+}
+
+
+.locketitem img {
+    width: 100%;
+    height: auto;
+}
+.locketitem h3 {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 27px;
+    margin: 15px 0 10px;
+}
+.locketitem p.price {
+    color: var(--primary);
+    font-weight: 500;
+    margin: 0;
+}
+
+
+
+/* TESTIMONIALS SECTION CSS */
+
+.homereviews {
+    padding: 60px 0;
+    background: #f5f5f5;
+}
+
+.homereviews .row {
+    align-items: center;
+}
+.homereviews .homereviews-item>img {
+    width: 100%;
+}
+
+.homereviews-btm {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+}
+.homereviews-btm img {
+    border-radius: 50%;
+}
+.homereviews-btm h3 {
+    margin: 0 0 5px;
+    font-weight: 700;
+    color: var(--dark);
+    font-size: 19px;
+}
+.homereviews-btm h3 span {
+    display: block;
+    font-size: 14px;
+    margin-top: 8px;
+    font-weight: 500;
+    color: #5e5e5e;
+}
+.rating i {
+    color: #ffb400;
+    font-size: 13px;
+}
+.rating {
+    margin: 0;
+}
+
+
+
+/* FAQ SECTION CSS */
+
+.faq{
+    padding: 60px 0;
+}
+
+/* FOOTER SECTION CSS */
+
+footer {
+    border-top: 1px solid #ddd;
+    padding: 60px 0 30px;
+    text-align: center;
+}
+
+footer ul.socialicon {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 20px;
+}
+
+footer ul.socialicon li a {
+    font-size: 17px;
+    height: 40px;
+    width: 40px;
+    background: var(--primary);
+    color: var(--white);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 0 3px;
+    border: 2px solid transparent;
+}
+
+footer ul.socialicon li a:hover {
+    color: var(--primary);
+    background: var(--white);
+    border-color:var(--primary);
+}
+footer p {
+    font-size: 17px;
+    margin: 0;
+}
+
+
+@media only screen and (max-width: 992px) {
+    header ul.menutop {
+        display: none;
+    }
+    header a.tooglemenu {
+        display: block;
+    }
+    header a.logo {
+        text-align: center;
+    }
+    
+    header a.tooglemenu, header a.logo, header ul.cart {
+        width: 33.3%;
+    }
+    .cart {
+        justify-content: flex-end;
+    }
+    .special-moment .heading {
+        font-size: 150px;
+    }
+    .be-amazed h2 {
+        font-size: 150px;
+    }
+    .locket-info {
+        text-align: center;
+        padding: 0;
+    }
+    .locket-info ul {
+        justify-content: center;
+    }
+    .locket-image img {
+        margin-bottom: 30px;
+        width: 100%;
+        padding: 0;
+    }
+    .parents h3 {
+        font-size: 70px;
+    }
+    .special-moment .heading {
+        font-size: 100px;
+        margin-top: -40px;
+    }
+    .special-moment {
+        text-align: center;
+    }
+    .special-moment .offset-lg-1.col-lg-5.col-md-12:nth-child(1) {
+        order: 2;
+    }
+    .moment-info {
+        text-align: center;
+        margin-top: 30px;
+        padding: 0;
+    }
+    .amazed-2 {
+        margin-top: 5%;
+    }
+    .be-amazed h2 {
+        font-size: 90px;
+        line-height: 80px;
+        margin-top: 30px;
+    }
+    .customize-locket {
+        text-align: center;
+    }
+    .customize-content {
+        padding: 5% 65px 0 25px;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .heading, .leftheading {
+        font-size: 40px;
+    }
+    .accordion-item {
+        width: 100%;
+    }
+    .special-moment .heading, .be-amazed h2 {
+        margin-top: 0;
+        font-size: 50px;
+        width: auto;
+    }
+    a.logo img {
+        width: 100%;
+    }
+    .parent-1 {
+        padding-top: 150px;
+        margin-bottom: 20px;
+    }
+    .special-moment img {
+        width: 100%;
+    }
+    .customize-locket {
+        padding-top: 40px;
+    }
+    .digital-locket {
+        padding: 0 0 50px 0;
+        margin-top: 0;
+    }
+    .special-moment .heading, .be-amazed h2 {
+        margin-top: 40px;
+        font-size: 40px;
+    }
+    header a.tooglemenu, header a.logo, header ul.cart {
+        width: 27%;
+    }
+    header a.logo {
+        width: 46%;
+    }
+    .cart {
+        column-gap: 10px;
+    }
+    .parents h3 {
+        font-size: 40px;
+    }
+}
+@media only screen and (max-width: 415px) {
+    ul.cart {
+        display: none;
+    }
+    header {
+        padding: 12px 0;
+    }
+    .mainslider img {
+        width: 100%;
+        height: 340px;
+        object-fit: cover;
+    }
+    .locket-info li a {
+        font-size: 13px;
+    }
+    .customize-content {
+        padding: 20px 0 0;
+    }
+    .benifits .row {
+        row-gap: 33px;
+    }
+    .benifits {
+        padding: 0 0 50px 0;
+    }
+    .howitwork h2 {
+        font-size: 15px;
+    }
+    .lockets h4 {
+        font-size: 16px;
+        line-height: 29px;
+    }
+}
+@media only screen and (max-width: 375px) {
+    .locket-info ul {
+        flex-direction: column;
+        row-gap: 10px;
+        padding-top: 15px;
+    }
+    .moment-info {
+        margin-top: 18px;
+    }
+    .moment-info p {
+        margin: 10px 0 22px;
+    }
+    .moment-info h3 {
+        font-size: 21px;
+    }
+    .howitwork {
+        padding: 40px 0;
+    }
+}
